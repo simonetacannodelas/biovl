@@ -1,0 +1,141 @@
+<!doctype html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Matching Game FermProc</title>
+        <meta name="description" content="">
+		<link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../static/css/fermproc-memorygame.css">
+    </head>
+	<body>
+
+
+        <div class="clear"></div>
+
+        <div id="menu-bar-container">
+
+            <div id="menu-bar">
+
+                <h1>FermProc. A virtual educational bioprocess plant</h1>
+
+            </div>
+
+            <div class="clear"></div>
+
+            <div id="menu-bar-2-container">
+
+                <div id="menu-bar-2">
+
+                    <a href='{{ url_for('index') }}'>Home</a>
+
+                    <a href="{{ url_for('rules') }}">Rules</a>
+
+                    <a href="{{ url_for('howtomodels') }}">How to build a model</a>
+
+                    <a href="{{ url_for('model_library') }}">Model library</a>
+
+                     <a href="{{ url_for('minigames') }}">Minigames</a>
+
+                     <a href="{{ url_for('simulator') }}">Simulations</a>
+
+                     <a href="">Video</a>
+
+                     <a href="">Tests</a>
+
+                     <a href="">Chatbot</a>
+
+                     <a href="" class="no-border">More</a>
+
+
+                </div>
+
+            </div>
+
+        </div>
+    <div class="container">
+        <header>
+            <h1 style='color:black'>Matching Game</h1>
+        </header>
+		<p> Yupi. A memory game</p>
+
+        <section class="score-panel">
+        	<ul class="stars">
+        		<li id= 'star1'><i class="fa fa-star"></i></li>
+        		<li id= 'star2' ><i class="fa fa-star"></i></li>
+        		<li id= 'star3'><i class="fa fa-star"></i></li>
+        	</ul>
+
+        	<span id="moves">0</span> Moves
+            <span id="timer">0</span> Timer
+
+            <div class="restart">
+        		<i class="fa fa-repeat"></i>
+        	</div>
+        </section>
+
+        <ul class="deck">
+            <li class="card">
+                <i class="fa fa-diamond symbols"></i>
+            </li>
+            <li class="card">
+                <i class="fa fa-paper-plane-o symbols"></i>
+            </li>
+            <li class="card">
+                <i class="fa fa-anchor symbols"></i>
+            </li>
+            <li class="card">
+                <i class="fa fa-bolt symbols"></i>
+            </li>
+            <li class="card">
+                <i class="fa fa-cube symbols"></i>
+            </li>
+            <li class="card">
+                <i class="fa fa-anchor symbols"></i>
+            </li>
+            <li class="card">
+                <i class="fa fa-leaf symbols"></i>
+            </li>
+            <li class="card">
+                <i class="fa fa-bicycle symbols"></i>
+            </li>
+            <li class="card">
+                <i class="fa fa-diamond symbols"></i>
+            </li>
+            <li class="card">
+                <i class="fa fa-bomb symbols"></i>
+            </li>
+            <li class="card">
+                <i class="fa fa-leaf symbols"></i>
+            </li>
+            <li class="card">
+                <i class="fa fa-bomb symbols"></i>
+            </li>
+            <li class="card">
+                <i class="fa fa-bolt symbols"></i>
+            </li>
+            <li class="card">
+                <i class="fa fa-bicycle symbols"></i>
+            </li>
+            <li class="card">
+                <i class="fa fa-paper-plane-o symbols"></i>
+            </li>
+            <li class="card">
+                <i class="fa fa-cube symbols"></i>
+            </li>
+        </ul>
+    </div>
+        <div>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div id="middle">
+                    <h2>Congratulations!</h2> 
+                    <p id="p1"></p>
+                    <button id='playBt' onClick ='window.location.reload()'>Play Again</button>
+                </div>
+            </div>
+        </div>
+        </div>    
+        <script src="../static/JavaScript/fermproc-memorygame.js"></script>
+    </body>
+    </html>

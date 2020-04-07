@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block content %}
+        <div class="mid">
+            <img id="background-fight" src="../static/multimedia/start.png">
+          <h2>Bioprocesses</h2>
+        </div>
+
+            <div id="introduction">
+            	<p></p>
+                <h3><center>Introduction</center></h3>
+				
+                <p> The world is evolving and we need to be prepare to help into a more sustainable future. To do so, DTU and Auckland University are developing a free platform with the aim to encourage bioengineering students to learn more about bioprocess models and being more prepare to implemented them in their society.</p>
+                <p><p><em>FermProc</em> is the results of this efforts. In FermProc, you can do:</p>
+                <center>
+                    <p><a href='{{ url_for('model_library') }}'><em>Optimize the production of the microorganism of your choice</em></a></p>
+					<p><em>Control the production of your very unstable bioprocess</em></p>
+					<p><em>Learn how to code your own fermentation model in Python</em></p>
+                </center>
+            </div>
+{#            #}
+{#			<div>#}
+{#			<h3><center>Let's start</center></h3>#}
+{#				<div> <center>#}
+{#				<a href='{{ url_for('howtomodels') }}'><img id="bottoms" title="Theory" src=../static/multimedia/theory.png></a>#}
+{#				<a href='{{ url_for('model_library') }}'><img id="bottoms" title="Model library" src=../static/multimedia/models.png></a>#}
+{#				<a href='{{ url_for('minigames') }}'><img id="bottoms-right" title="Minigames" src=../static/multimedia/minigame.png></a>#}
+{#				<a href='{{ url_for('simulator') }}'><img id= "bottoms-right" title="Build your own model" src=../static/multimedia/buildyours.png></a>#}
+{#					</center></div>	#}
+{#			</div>#}
+			<div class="clear">
+				<form>
+				</form>
+			</div>	
+            <div id="">
+            <p></p>
+            <hr>
+                <h3><center>Who are we?</center></h3>
+                <p> We are an small team in the Process and Systems Engineering Center in DTU.</p>
+                <p>Our aim is to develop an easy to use and to understand bioprocess simulator. If you have any comment or new idea; don't hesitate to contact us to simoca@kt.dtu.dk.</p>
+				
+            </div>
+{% endblock %}

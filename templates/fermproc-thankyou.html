@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FermProc</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/fermproc.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+</head>
+<body>
+
+
+        <div class="clear"></div>
+
+        <div id="menu-bar-container">
+
+            <div id="menu-bar">
+
+                <h1>FermProc. A virtual educational bioprocess plant</h1>
+
+            </div>
+
+            <div class="clear"></div>
+
+            <div id="menu-bar-2-container">
+
+                <div id="menu-bar-2">
+
+                    <a href='{{ url_for('index') }}'>Home</a>
+
+                    <a href="{{ url_for('rules') }}">Rules</a>
+
+                    <a href="{{ url_for('howtomodels') }}">How to build a model</a>
+
+                    <a href="{{ url_for('model_library') }}">Model library</a>
+
+                     <a href="{{ url_for('minigames') }}">Minigames</a>
+
+                     <a href="{{ url_for('simulator') }}">Simulations</a>
+
+                     <a href="">Video</a>
+
+                     <a href="">Tests</a>
+
+                     <a href="">Chatbot</a>
+
+                     <a href="" class="no-border">More</a>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="clear"></div>
+
+        <div id="page-container"></div>
+    <p> Surprise!! The ethanol and biomass concentrations were crossed.</p>
+    <div class="chart" id="bargraph">
+    <script>
+        var graphs = {{plot | safe}};
+        Plotly.plot('bargraph',graphs,{});
+    </script>
+    </div>
+
+</body>
+</html>

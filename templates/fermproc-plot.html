@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FermProc</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/fermproc.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+</head>
+<body>
+
+
+        <div class="clear"></div>
+
+        <div id="menu-bar-container">
+
+            <div id="menu-bar">
+
+                <h1>FermProc. A virtual educational bioprocess plant</h1>
+
+            </div>
+
+            <div class="clear"></div>
+
+            <div id="menu-bar-2-container">
+
+                <div id="menu-bar-2">
+
+                    <a href='{{ url_for('index') }}'>Home</a>
+
+                    <a href="{{ url_for('rules') }}">Rules</a>
+
+                    <a href="{{ url_for('howtomodels') }}">How to build a model</a>
+
+                    <a href="{{ url_for('model_library') }}">Model library</a>
+
+                     <a href="{{ url_for('minigames') }}">Minigames</a>
+
+                     <a href="{{ url_for('simulator') }}">Simulations</a>
+
+                     <a href="">Video</a>
+
+                     <a href="">Tests</a>
+
+                     <a href="">Chatbot</a>
+
+                     <a href="" class="no-border">More</a>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="clear"></div>
+
+        <div id="page-container"></div>
+        <p> </p>
+        <size = '19'>
+        <div class="chart" id="bargraph">
+        <script>
+            var graphs = {{plot | safe}};
+            Plotly.plot('bargraph',graphs,{});
+        </script>
+                <p> Now you have the possibility to modify some of the parameter of the model </p>
+        </div>
+        <form method="POST">
+            {{form.csrf_token}}
+            {{form.parameter}}
+            <input type="submit">
+        </form>
+        <form action={{ url_for("plot") }}>
+        <p> And this is how it should work</p>
+        <center><video width="500" height = "300"controls>
+					<source src='../static/multimedia/modification%20of%20the%20model.mov' type="video/mp4">
+        </video></center>
+
+</body>
+</html>

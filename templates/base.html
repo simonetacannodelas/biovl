@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FermProc</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/fermproc.css">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="../static/multimedia/owl.png">
+    <!-- CSS -->
+    <link rel="stylesheet" href="static/css/font-awesome.min.css">
+    <link rel="stylesheet" href="static/css/style.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+{#      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>#}
+{#      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>#}
+     <![endif]-->
+</head>
+<body>
+
+        <div class="clear"></div>
+
+        <div id="menu-bar-container">
+
+            <div id="menu-bar">
+
+                <h1>FermProc. A virtual educational bioprocess plant</h1>
+
+            </div>
+
+            <div class="clear"></div>
+
+            <div id="menu-bar-2-container">
+
+                <div id="menu-bar-2">
+
+                    <a href='{{ url_for('index') }}'>Home</a>
+
+                    <a href="{{ url_for('rules') }}">Rules</a>
+
+                    <a href="{{ url_for('howtomodels') }}">How to build a model</a>
+
+                    <a href="{{ url_for('model_library') }}">Model library</a>
+
+                     <a href="{{ url_for('minigames') }}">Minigames</a>
+
+                     <a href="{{ url_for('simulator') }}">Simulations</a>
+
+                     <a href="">Video</a>
+
+                     <a href="">Tests</a>
+
+                     <a href="{{ url_for('frosty') }}">Chatbot</a>
+
+                     <a href="" class="no-border">More</a>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    <mybot></mybot>
+    <!--JS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="static/js/script.js"></script>
+
+  </body>
+</html>
+
+     {% block content %}
+
+     {% endblock %}
+</body>
+</html>

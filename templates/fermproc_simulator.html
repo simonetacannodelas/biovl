@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div id="clear"> </div>
+    <p></p>
+    <h3> FermProc simulator</h3>
+    In this window you will be able to try the models that we have implemented and modified them.
+    The questions you should be asking yourself.
+    <center><size = '19'>
+    <form method="POST">
+        {{form.csrf_token}}
+        {{form.models}}
+        <input type="submit">
+    </form>
+    </center>
+    {% for mess in get_flashed_messages() %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+          <strong>Holy guacamole!</strong> You should select a model if you want to simulate something.
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true"></span>
+          </button>
+        {{ mess }}
+        </div>
+    {% endfor %}
+
+{% endblock %}

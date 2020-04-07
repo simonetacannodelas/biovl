@@ -1,0 +1,186 @@
+{% extends 'base.html' %}
+{% block content %}
+		<div class="clear"></div>
+		
+    <h3>Model library for bioprocess in FermProc</h3>
+		<p><center>Choose your player<size = '19'>
+        <form method="POST">
+            {{form.csrf_token}}
+            {{form.models}}
+            <input type="submit">
+        </form>
+        </center>
+        </p>
+        {% for mess in get_flashed_messages() %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+          <strong>Holy guacamole!</strong> You should select a model if you want to simulate something.
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true"></span>
+          </button>
+        {{ mess }}
+        </div>
+        {% endfor %}
+        <h4><center><strong><i>Monod Herbert Fermentation (Aerobic) </strong></i></center></h4>
+
+		<div>
+			<table>
+				<tr>
+					<td><p>The building block of bioprocess models</p>
+                        <p>This is the way that is commonly can describe wee beasties (biological systems)</p>
+					<p></p></td>
+					<td><center><video width="500" height = "300"controls>
+					<source src='../static/multimedia/Scerevisiae.mp4' type="video/mp4">
+					Your browser does not support the video tag.
+					</video>
+					</center></td>
+				</tr>
+			</table>
+		</div>
+    		</div>
+			<center>
+			 <table>
+				<thead> <th></th></thead>
+				<tbody>
+					<tr>
+					<td><a href="https://github.com/simonetacannodelas/FermProc-Library"><center><img width="30px" height="30px" id="git-hub" src="../static/multimedia/github.png"></center></a></td></tr>
+					<tr><td><a href={{ url_for('plot')}}>Simulation of <i> Monod Herbert</i></a></td></tr>
+					<tr><td><a href={{ url_for('questionnaire_scerevisiae')}}>Test about <i> Saccharomyces cerevisiae</i></a></td></tr>
+				</tbody>
+			</table>
+			</center>
+		<div></div>
+            <h4><center><strong><i>Monod Herbert Fermentation (Anaerobic) </strong></i></center></h4>
+		<div>
+			<table>
+				<tr>
+					<td><p>The building block of bioprocess models</p>
+                        <p>This is the way that is commonly can describe wee beasties (biological systems)</p>
+					<p></p></td>
+					<td><center><video width="500" height = "300"controls>
+					<source src='../static/multimedia/Scerevisiae.mp4' type="video/mp4">
+					Your browser does not support the video tag.
+					</video>
+					</center></td>
+				</tr>
+			</table>
+		</div>
+    		</div>
+			<center>
+			 <table>
+				<thead> <th></th></thead>
+				<tbody>
+					<tr>
+					<td><a href="https://github.com/simonetacannodelas/FermProc-Library"><center><img width="30px" height="30px" id="git-hub" src="../static/multimedia/github.png"></center></a></td></tr>
+					<tr><td><a href={{ url_for('plot')}}>Simulation of <i> Monod Herbert</i></a></td></tr>
+					<tr><td><a href={{ url_for('questionnaire_scerevisiae')}}>Test about <i> Saccharomyces cerevisiae</i></a></td></tr>
+				</tbody>
+			</table>
+			</center>
+		<div></div>
+		<h4><center><strong><i>Saccharomyces cerevisiae (Aerobic)</strong></i></center></h4>
+		
+		<div>
+			<table>
+				<tr>
+					<td><p>Responsable of beer and wine. Maybe one of the most appreciated microorganisms in the universe.</p>
+                        <p>This beautiful yeast has a unique physiology and it is one of the most used wee beasties (biological systems) as host for genetical manipulations. Also, it has a long history of safety use and consumption, and lack of production of toxins, so therefore, most strains of <em>S.cerevisiae</em> are considered as safe (GRAS).</p>
+					<p>Moreover in the industry, it is highly appreciated due to its ability of growth under aerobic and anaerobic conditions.
+					Naturally, <i>Saccharomyces cerevisiae</i> is used for the production of yeast or ethanol.</p></td>
+					<td><center><video width="500" height = "300"controls>
+					<source src='../static/multimedia/Scerevisiae.mp4' type="video/mp4">
+					Your browser does not support the video tag.
+					</video>
+					</center></td>
+				</tr>			
+			</table>															
+		</div>
+			<center>
+			 <table> 
+				<thead> <th></th></thead>
+				<tbody>
+					<tr>
+					<td><a href="https://github.com/simonetacannodelas/FermProc-Library"><center><img width="30px" height="30px" id="git-hub" src="../static/multimedia/github.png"></center></a></td></tr>
+					<tr><td><a href={{ url_for('plot')}}>Simulation of the <i> Saccharomyces cerevisiae</i></a></td></tr>
+					<tr><td><a href={{ url_for('questionnaire_scerevisiae')}}>Test about <i> Saccharomyces cerevisiae</i></a></td></tr>
+				</tbody>
+			</table>
+			</center>
+		<div></div>
+		<h4><center><strong><i>Escherichia coli (Aerobic)</strong></i></center></h4>
+
+		<div>
+			<table>
+				<tr>
+					<td><p>One of the most common host. This gram-negative bacteria has been commonly being modified as a host for genetical manipulations .</p>
+                        <p></p></td>
+					<td><center><video width="500" height = "300"controls>
+					<source src='../static/multimedia/Scerevisiae.mp4' type="video/mp4">
+					Your browser does not support the video tag.
+					</video>
+					</center></td>
+				</tr>
+			</table>
+		</div>
+			<center>
+			 <table>
+				<thead> <th></th></thead>
+				<tbody>
+					<tr>
+					<td><a href="https://github.com/simonetacannodelas/FermProc-Library"><center><img width="30px" height="30px" id="git-hub" src="../static/multimedia/github.png"></center></a></td></tr>
+					<tr><td><a href={{ url_for('plot')}}>Simulation of the <i> Escherichia coli</i></a></td></tr>
+				</tbody>
+			</table>
+			</center>
+		<div></div>
+		<h4><center><strong><i>Mannheimia succiniciproducens (Anaerobic)</strong></i></center></h4>
+		<div>
+			<table>
+				<tr>
+					<td><p>One of the wee beasties used in the production of succinic acid in large scale.</p>
+						<p>Succinic acid is used in agricultural, food and pharmaceutical industries.Succinate has been place in the top 12 pf platform chemicals from biomass. It is the precursor to some polyesters and biodegradable polymers. Furthermore, succinci acid is also an important safe food adictive as an acidity regulator; as well as in the pharmaceutical products. In pharmaceutics, it is also a fundamental intermediate product.</p><p>Historically, succinic acid was obtained form amber by distillation and has thus been know as spirit of amber. It global production is estimated at 16,000 to 30,000 tons a year, with an annual growth rate of 10%. It is a great example of the transition from a swith to a fermetation production</p>
+					</td>
+					<td><center><video width="500" height = "300"controls>
+					<source src="..static/multimedia/Scerevisiae.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+					</video>
+					</center></td>
+				</tr>			
+			</table>															
+		</div>
+			<center>
+			 <table> 
+				<thead> <th>Link</th></thead>
+				<tbody>
+					<tr>
+					<td><a href="https://github.com/simonetacannodelas/FermProc-Library"><center><img width="30px" height="30px" id="git-hub" src="../static/multimedia/github.png"></center></a></td></tr>
+					<tr><td><a href={{ url_for('simulator')}}>Simulation of the <i> Mannheimia succiniciproducens</i></a></td></tr>
+				</tbody>
+			</table>
+			</center>		
+
+		<h4><center><strong><i>Corynebacterium glutamicum (Aerobic)</strong></i></center></h4>
+		<div>
+			<table>
+				<tr>
+					<td><p>In this bioconversion, the bacteria produces L-Glutamic acid. L-Glutamic acid is commercially one of the most important amino acids.</p>
+						<p></p>
+					</td>
+					<td><center><video width="500" height = "300"controls>
+					<source src="..static/multimedia/Scerevisiae.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+					</video>
+					</center></td>
+				</tr>
+			</table>
+		</div>
+			<center>
+			 <table>
+				<thead> <th>Link</th></thead>
+				<tbody>
+					<tr>
+					<td><a href="https://github.com/simonetacannodelas/FermProc-Library"><center><img width="30px" height="30px" id="git-hub" src="../static/multimedia/github.png"></center></a></td></tr>
+					<tr><td><a href={{ url_for('simulator')}}>Simulation of the <i> Corynebacterium glutamicum </i></a></td></tr>
+				</tbody>
+			</table>
+			</center>
+{% endblock %}

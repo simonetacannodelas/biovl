@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <form method="POST">
+        {{form.csrf_token}}
+        {{form.parameters}}
+        <input type="submit">
+    </form>
+<script src="{{ url_for('static', filename='js/jquery-1.11.1.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/plots.js') }}"></script>
+{% endblock %}
